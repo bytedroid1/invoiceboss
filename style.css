@@ -1,0 +1,259 @@
+/* InvoiceBoss — the app's own design language on the web.
+   Flat, squared, purple and yellow. No rounded pills, no gradients, no
+   third-party requests: the site makes the same promise the app does, so it
+   must not phone anywhere either (no font CDN, no analytics, no embeds). */
+
+:root {
+  --purple: #5e4a8c;
+  --purple-deep: #4a3a70;
+  --purple-tint: #efeaf7;
+  --yellow: #ffc93c;
+  --black: #1a1a1f;
+  --grey: #6b6b78;
+  --line: #dcd8e6;
+  --white: #ffffff;
+  --wash: #faf9fc;
+
+  --measure: 62ch;
+  --page: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Source Sans 3", "Source Sans Pro", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--purple); }
+a:hover { color: var(--purple-deep); }
+
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ------------------------------------------------------------------ nav */
+
+.nav {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 10;
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 66px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  font-size: 18px;
+  color: var(--black);
+  text-decoration: none;
+  margin-right: auto;
+}
+.brand img { width: 30px; height: 30px; }
+.nav a.link {
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.nav a.link:hover { color: var(--black); }
+
+/* ----------------------------------------------------------------- hero */
+
+.hero {
+  background: var(--purple);
+  color: var(--white);
+  padding: 72px 0 0;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: end;
+}
+.tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(34px, 5.4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+  margin: 0 0 18px;
+  font-weight: 800;
+}
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 46ch;
+  margin: 0 0 28px;
+}
+.hero-shot {
+  align-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 0;
+  max-width: 300px;
+  margin: 0 0 0 auto;
+}
+.badges { display: flex; gap: 10px; flex-wrap: wrap; padding-bottom: 46px; }
+.badge {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* -------------------------------------------------------------- section */
+
+section { padding: 68px 0; }
+section.alt { background: var(--wash); border-block: 1px solid var(--line); }
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: var(--grey);
+  margin: 0 0 12px;
+}
+h2 {
+  font-size: clamp(26px, 3.4vw, 34px);
+  letter-spacing: -0.9px;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+h3 { font-size: 19px; letter-spacing: -0.3px; margin: 0 0 6px; font-weight: 800; }
+.lede { color: var(--grey); max-width: var(--measure); margin: 0 0 32px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.card {
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 22px;
+}
+.card p { margin: 0; color: var(--grey); font-size: 15px; }
+.card .mark {
+  width: 34px;
+  height: 4px;
+  background: var(--yellow);
+  margin-bottom: 16px;
+}
+
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.shots figure { margin: 0; }
+.shots img { border: 1px solid var(--line); }
+.shots figcaption { font-size: 13.5px; color: var(--grey); margin-top: 10px; }
+
+/* -------------------------------------------------------------- pricing */
+
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.plan { border: 1px solid var(--line); padding: 24px; background: var(--white); position: relative; }
+.plan.best { border: 2px solid var(--purple); }
+.plan .flag {
+  position: absolute;
+  top: -11px;
+  left: 22px;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  padding: 4px 9px;
+}
+.plan .price { font-size: 30px; font-weight: 800; letter-spacing: -1px; margin: 6px 0 2px; }
+.plan .per { color: var(--grey); font-size: 14px; }
+.note { font-size: 13.5px; color: var(--grey); margin-top: 18px; }
+
+/* ------------------------------------------------------------- prose */
+
+.prose { max-width: var(--measure); }
+.prose h2 { margin-top: 44px; }
+.prose h3 { margin-top: 28px; }
+.prose p, .prose li { color: #33333c; }
+.prose ul { padding-left: 20px; }
+.prose li { margin-bottom: 8px; }
+.prose strong { font-weight: 700; }
+.updated {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--grey);
+  margin-bottom: 8px;
+}
+.callout {
+  border-left: 3px solid var(--yellow);
+  background: var(--purple-tint);
+  padding: 16px 18px;
+  margin: 26px 0;
+}
+.callout p { margin: 0; }
+
+/* -------------------------------------------------------------- footer */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 34px 0 46px;
+  color: var(--grey);
+  font-size: 14.5px;
+}
+footer .wrap { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+footer a { color: var(--grey); text-decoration: none; font-weight: 600; }
+footer a:hover { color: var(--black); }
+footer .spacer { margin-left: auto; }
+
+/* On a narrow phone the brand and the three links have no room to sit on
+   one line — they end up touching. Let the links drop to their own row. */
+@media (max-width: 620px) {
+  .nav .wrap {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .brand { width: 100%; margin-right: 0; }
+  .nav a.link { font-size: 14px; }
+}
+
+@media (max-width: 800px) {
+  .hero { padding-top: 48px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-shot { margin: 0 auto; max-width: 260px; }
+  .badges { padding-bottom: 34px; }
+  section { padding: 48px 0; }
+}
