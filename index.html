@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>InvoiceBoss — Invoice Generator</title>
-<meta name="description" content="Professional invoices from your phone. 43 designs, recurring bills, estimates and PDF export. No account, and your data never leaves your device.">
+<meta name="description" content="Professional invoices from your phone. 43 designs, recurring bills, quotations and PDF export. No account, and your data never leaves your device.">
 <link rel="icon" href="img/icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -24,7 +24,7 @@
     <div>
       <span class="tag">INVOICE GENERATOR</span>
       <h1>Send an invoice<br>before you leave<br>the job.</h1>
-      <p>Forty-three professional designs, recurring bills, estimates and
+      <p>Forty-three professional designs, recurring bills, quotations and
          PDF export — on your phone, with no account to create and nothing
          uploaded anywhere.</p>
       <div class="badges">
@@ -33,7 +33,17 @@
         <span class="badge">No ads</span>
       </div>
     </div>
-    <img class="hero-shot" src="img/home.png" alt="The InvoiceBoss invoice list on a phone">
+
+    <!-- The app and what comes out of it. A screenshot on its own reads as a
+         screenshot; the invoice behind it is the thing being sold. -->
+    <div class="hero-stage">
+      <img class="hero-paper" src="img/design-northlight.png"
+           alt="An invoice in the Northlight design, laid out for A4">
+      <div class="phone">
+        <img src="img/app-invoices.png"
+             alt="The InvoiceBoss invoice list, showing a paid and an unpaid invoice">
+      </div>
+    </div>
   </div>
 </header>
 
@@ -60,8 +70,8 @@
       </div>
       <div class="card">
         <div class="mark"></div>
-        <h3>Estimates that convert</h3>
-        <p>Quote for work, then turn an accepted estimate into an invoice in
+        <h3>Quotations that convert</h3>
+        <p>Quote for work, then turn an accepted quotation into an invoice in
            one tap.</p>
       </div>
       <div class="card">
@@ -110,20 +120,77 @@
     <h2>Designs that look paid for</h2>
     <p class="lede">Every design is a real PDF laid out for A4, tested against
        long descriptions, thirty-line invoices and logos of any shape.</p>
-    <div class="shots">
+  </div>
+
+  <!-- The designs run past continuously, right to left. The list is written
+       twice: the animation travels exactly one copy's width and restarts, so
+       the seam never shows. Hovering stops it, and a reader who has asked for
+       reduced motion gets a strip they can scroll by hand instead. -->
+  <div class="reel">
+    <div class="reel-track">
       <figure>
-        <img src="img/template-aurora.png" alt="The Aurora invoice design">
-        <figcaption>Aurora — one of ten on the Recommended shelf.</figcaption>
+        <img src="img/design-northlight.png" alt="The Northlight invoice design">
+        <figcaption><b>Northlight</b></figcaption>
       </figure>
       <figure>
-        <img src="img/template-burnt.png" alt="The Burnt Frame invoice design">
-        <figcaption>Burnt Frame — from the Colourful shelf.</figcaption>
+        <img src="img/design-sovereign.png" alt="The Sovereign invoice design">
+        <figcaption><b>Sovereign</b></figcaption>
       </figure>
       <figure>
-        <img src="img/setup.png" alt="First-run setup in InvoiceBoss">
-        <figcaption>Setup asks three things, once.</figcaption>
+        <img src="img/design-ember.png" alt="The Ember invoice design">
+        <figcaption><b>Ember</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-tessera.png" alt="The Tessera invoice design">
+        <figcaption><b>Tessera</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-observatory.png" alt="The Observatory invoice design">
+        <figcaption><b>Observatory</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-tidewater.png" alt="The Tidewater invoice design">
+        <figcaption><b>Tidewater</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-regent.png" alt="The Regent invoice design">
+        <figcaption><b>Regent</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-archway.png" alt="The Archway invoice design">
+        <figcaption><b>Archway</b></figcaption>
+      </figure>
+
+      <figure aria-hidden="true">
+        <img src="img/design-northlight.png" alt=""><figcaption><b>Northlight</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-sovereign.png" alt=""><figcaption><b>Sovereign</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-ember.png" alt=""><figcaption><b>Ember</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-tessera.png" alt=""><figcaption><b>Tessera</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-observatory.png" alt=""><figcaption><b>Observatory</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-tidewater.png" alt=""><figcaption><b>Tidewater</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-regent.png" alt=""><figcaption><b>Regent</b></figcaption>
+      </figure>
+      <figure aria-hidden="true">
+        <img src="img/design-archway.png" alt=""><figcaption><b>Archway</b></figcaption>
       </figure>
     </div>
+  </div>
+
+  <div class="wrap">
+    <p class="note">Eight of the forty-three, every one the real PDF, rendered
+       by the app from the same invoice.</p>
   </div>
 </section>
 
@@ -168,10 +235,10 @@
     <div class="plans">
       <div class="plan">
         <h3>Free</h3>
-        <div class="price">0</div>
-        <div class="per">forever</div>
+        <div class="price">Nothing</div>
+        <div class="per">for as long as you like</div>
         <p class="note">2 designs · 10 invoices a month · 10 sends a month ·
-           logo, signature, estimates and part payments included.</p>
+           logo, signature, quotations and part payments included.</p>
       </div>
       <div class="plan best">
         <span class="flag">3 DAYS FREE</span>
@@ -218,6 +285,16 @@
         <h3>Is there a watermark?</h3>
         <p>Never. Free invoices are clean invoices — nothing is stamped on a
            document you send a client.</p>
+      </div>
+      <div class="card">
+        <h3>Can I bill in my own currency?</h3>
+        <p>Yes, and per invoice — bill one client in dollars and another in
+           rupees if that is how you work.</p>
+      </div>
+      <div class="card">
+        <h3>Do my clients need the app?</h3>
+        <p>No. They receive an ordinary PDF, by email or any app you share
+           with. Nothing to install and nothing to sign into.</p>
       </div>
     </div>
   </div>

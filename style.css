@@ -84,14 +84,14 @@ a:hover { color: var(--purple-deep); }
 .hero {
   background: var(--purple);
   color: var(--white);
-  padding: 72px 0 0;
+  padding: 72px 0 64px;
   overflow: hidden;
 }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
-  align-items: end;
+  align-items: center;
 }
 .tag {
   display: inline-block;
@@ -117,14 +117,45 @@ a:hover { color: var(--purple-deep); }
   max-width: 46ch;
   margin: 0 0 28px;
 }
-.hero-shot {
-  align-self: end;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 0;
-  max-width: 300px;
-  margin: 0 0 0 auto;
+/* The app over the invoice it produces. The phone is drawn here rather than
+   baked into the image, so the screenshot stays a clean asset and the bezel
+   can be tuned without re-exporting anything.
+   Both pieces sit whole inside the stage: cropped at the section edge they
+   read as a broken image rather than a composition, which is exactly how the
+   first attempt looked on the page. */
+.hero-stage {
+  position: relative;
+  align-self: center;
+  margin-left: auto;
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 1 / 1.02;
 }
-.badges { display: flex; gap: 10px; flex-wrap: wrap; padding-bottom: 46px; }
+.hero-paper {
+  position: absolute;
+  right: 0;
+  top: 2%;
+  width: 68%;
+  transform: rotate(2.2deg);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.32);
+}
+.phone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 47%;
+  background: #17151f;
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.46);
+}
+.phone img {
+  border-radius: 23px;
+  display: block;
+  width: 100%;
+}
+.badges { display: flex; gap: 10px; flex-wrap: wrap; }
 .badge {
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 9px 14px;
@@ -173,10 +204,53 @@ h3 { font-size: 19px; letter-spacing: -0.3px; margin: 0 0 6px; font-weight: 800;
   margin-bottom: 16px;
 }
 
-.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-.shots figure { margin: 0; }
-.shots img { border: 1px solid var(--line); }
-.shots figcaption { font-size: 13.5px; color: var(--grey); margin-top: 10px; }
+/* The designs, running past right to left.
+   Every slide is an A4 page, so the strip keeps one shape — it used to mix two
+   invoices with a phone screenshot, which is a different aspect ratio and left
+   the row ragged. Spacing is margin, not gap: the track is the list twice over
+   and the animation travels exactly half of it, which only lands seamlessly
+   when the space after the last slide is part of that half. */
+.reel {
+  overflow: hidden;
+  margin-top: 30px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.reel-track {
+  display: flex;
+  width: max-content;
+  animation: reel 70s linear infinite;
+}
+.reel:hover .reel-track,
+.reel:focus-within .reel-track { animation-play-state: paused; }
+.reel figure {
+  margin: 0 22px 0 0;
+  width: 236px;
+  flex: 0 0 auto;
+}
+.reel img {
+  width: 236px;
+  aspect-ratio: 1 / 1.414;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: 0 12px 30px rgba(26, 26, 31, 0.13);
+}
+.reel figcaption { font-size: 13.5px; color: var(--grey); margin-top: 10px; }
+.reel figcaption b { color: var(--black); font-weight: 600; }
+
+@keyframes reel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Motion is a preference, not a given. Without the animation the strip is
+   still readable — it just scrolls by hand. */
+@media (prefers-reduced-motion: reduce) {
+  .reel { overflow-x: auto; }
+  .reel-track { animation: none; }
+}
 
 /* -------------------------------------------------------------- pricing */
 
@@ -253,7 +327,6 @@ footer .spacer { margin-left: auto; }
 @media (max-width: 800px) {
   .hero { padding-top: 48px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-shot { margin: 0 auto; max-width: 260px; }
-  .badges { padding-bottom: 34px; }
+  .hero-stage { margin: 0 auto; max-width: 380px; min-height: 360px; }
   section { padding: 48px 0; }
 }

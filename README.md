@@ -12,7 +12,9 @@ quietly reports every visitor to a third party would undercut that.
 
 ## Before you publish — three things to replace
 
-Search the folder for `REPLACE-WITH-` and fix every hit. Apple checks these
+The placeholders were filled on 14 August 2026 — contact email
+`alwinpatel3@gmail.com` on all three pages, governing law Pakistan in
+terms.html §10. If either changes, search the folder for the old value. Apple checks these
 links during review, and a page that 404s or shows a placeholder is a
 rejection.
 
