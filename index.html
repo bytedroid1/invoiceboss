@@ -3,9 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>InvoiceBoss — Invoice Generator</title>
-<meta name="description" content="Professional invoices from your phone. 43 designs, recurring bills, quotations and PDF export. No account, and your data never leaves your device.">
+<title>InvoiceBoss: Invoice Maker &amp; Estimate App for Small Business</title>
+<meta name="description" content="Invoice maker and estimate app for small businesses. Create professional PDF invoices and quotations on your phone, in 53 designs. No account needed.">
+<link rel="canonical" href="https://bytedroid1.github.io/invoiceboss/">
+<meta name="theme-color" content="#3a2d5c">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InvoiceBoss">
+<meta property="og:title" content="InvoiceBoss: Invoice Maker &amp; Estimate App">
+<meta property="og:description" content="Create professional PDF invoices and quotations on your phone, in 53 designs. No account needed.">
+<meta property="og:url" content="https://bytedroid1.github.io/invoiceboss/">
+<meta property="og:image" content="https://bytedroid1.github.io/invoiceboss/img/og-image.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="InvoiceBoss on a phone beside a printed invoice">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "InvoiceBoss",
+  "alternateName": "InvoiceBoss: Invoice Maker",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Android",
+  "description": "Invoice maker and estimate app for small businesses and freelancers. Create professional PDF invoices and quotations on your phone, choose from 53 designs, and see who owes you. No account needed.",
+  "url": "https://bytedroid1.github.io/invoiceboss/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.bytedroid.invoiceboss",
+  "image": "https://bytedroid1.github.io/invoiceboss/img/og-image.jpg",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
 <link rel="icon" href="img/icon.png">
+<link rel="preload" href="fonts/NunitoSans-Black.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,13 +51,19 @@
 </nav>
 
 <header class="hero">
+  <svg class="hero-bars" viewBox="0 0 420 142" aria-hidden="true" fill="#fff"><rect x="240" y="0" width="180" height="22" rx="3"/><rect x="110" y="0" width="90" height="22" rx="3"/><rect x="0" y="0" width="60" height="22" rx="3"/><rect x="300" y="40" width="120" height="22" rx="3"/><rect x="104" y="40" width="150" height="22" rx="3"/><rect x="0" y="40" width="64" height="22" rx="3"/><rect x="220" y="80" width="200" height="22" rx="3"/><rect x="104" y="80" width="80" height="22" rx="3"/><rect x="4" y="80" width="40" height="22" rx="3"/><rect x="324" y="120" width="96" height="22" rx="3"/><rect x="134" y="120" width="140" height="22" rx="3"/><rect x="2" y="120" width="88" height="22" rx="3"/></svg>
   <div class="wrap hero-grid">
     <div>
-      <span class="tag">INVOICE GENERATOR</span>
-      <h1>Send an invoice<br>before you leave<br>the job.</h1>
-      <p>Forty-three professional designs, recurring bills, quotations and
-         PDF export — on your phone, with no account to create and nothing
-         uploaded anywhere.</p>
+      <span class="tag">INVOICE MAKER</span>
+      <h1>Send an invoice before you <em>leave</em> the job.</h1>
+      <p>An invoice maker for small businesses and freelancers: 53
+         professional designs, quotations, recurring bills and PDF invoices,
+         on your phone. No account to create, and your invoices never leave
+         your phone.</p>
+      <a class="get" href="https://play.google.com/store/apps/details?id=com.bytedroid.invoiceboss">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 20h14"/></svg>
+        Get it on Google Play
+      </a>
       <div class="badges">
         <span class="badge">No account</span>
         <span class="badge">Works offline</span>
@@ -37,48 +74,81 @@
     <!-- The app and what comes out of it. A screenshot on its own reads as a
          screenshot; the invoice behind it is the thing being sold. -->
     <div class="hero-stage">
-      <img class="hero-paper" src="img/design-northlight.png"
-           alt="An invoice in the Northlight design, laid out for A4">
+      <img class="hero-paper" src="img/design-cornerstone.png" width="840" height="1188"
+           alt="An invoice in the Cornerstone design, laid out for A4">
       <div class="phone">
-        <img src="img/app-invoices.png"
-             alt="The InvoiceBoss invoice list, showing a paid and an unpaid invoice">
+        <img src="img/app-invoices.png" width="1442" height="3122"
+             alt="The InvoiceBoss home screen: what you are owed, what came in each month, and the invoice list">
       </div>
     </div>
   </div>
 </header>
 
+<section class="white">
+  <div class="wrap">
+    <p class="eyebrow">THE APP</p>
+    <h2>Built around getting paid</h2>
+    <p class="lede">What you are owed on the home screen, an invoice you can
+       send from the job, and every client's standing in one list.</p>
+    <div class="screens">
+      <img src="img/screen-1-invoices.jpg" width="540" height="960" loading="lazy"
+           alt="Know who owes you: the home screen with the amount outstanding, payments each month and the invoice list">
+      <img src="img/screen-2-invoice.jpg" width="540" height="960" loading="lazy"
+           alt="Send it before you leave the job: an invoice with Email, Share, Print and Payment buttons">
+      <img src="img/screen-3-editor.jpg" width="540" height="960" loading="lazy"
+           alt="An invoice in under a minute: the invoice editor with the client, dates, design and items">
+      <img src="img/screen-4-designs.jpg" width="540" height="960" loading="lazy"
+           alt="53 designs: three of the invoice designs side by side">
+      <img src="img/screen-5-clients.jpg" width="540" height="960" loading="lazy"
+           alt="Every client at a glance: who has paid, who owes you and who is late">
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <p class="eyebrow">WHAT IT DOES</p>
     <h2>Everything a small business bills with</h2>
-    <p class="lede">Built for tradespeople, freelancers, studios and anyone
-       who sends an invoice and wants it to look like it came from a real
-       company.</p>
+    <p class="lede">Built for tradespeople, freelancers, studios and shops —
+       anyone who sends an invoice and wants it to look like it came from a
+       real company.</p>
 
     <div class="grid">
       <div class="card">
         <div class="mark"></div>
-        <h3>43 invoice designs</h3>
-        <p>Professional, colourful, creative and simple. See any design at
-           full size before you pick it.</p>
+        <h3>53 invoice designs</h3>
+        <p>Professional, colourful, creative and simple. Preview your own
+           invoice in any design before you choose it.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
-        <h3>Your logo and signature</h3>
-        <p>Add your logo, sign with your finger, and set your own payment
-           details and terms.</p>
+        <h3>Make it yours</h3>
+        <p>Your logo and signature on every invoice. With Pro, change the
+           colours, pick from 100 fonts and print on A4 or US Letter.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
         <h3>Quotations that convert</h3>
-        <p>Quote for work, then turn an accepted quotation into an invoice in
-           one tap.</p>
+        <p>Send an estimate, then turn the accepted quotation into an invoice
+           in one tap.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
-        <h3>Recurring invoices</h3>
-        <p>Set a weekly, monthly or yearly schedule and the next bill raises
-           itself.</p>
+        <h3>Know who owes you</h3>
+        <p>The home screen shows what you are owed, what is late and what came
+           in each month.</p>
+      </div>
+      <div class="card">
+        <div class="mark"></div>
+        <h3>Payment reminders</h3>
+        <p>A reminder on the day an invoice is due, and again if it is three
+           days late.</p>
+      </div>
+      <div class="card">
+        <div class="mark"></div>
+        <h3>Every client at a glance</h3>
+        <p>See who has paid, who owes you and who is late, and pick a client
+           to fill in their details.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
@@ -88,21 +158,29 @@
       </div>
       <div class="card">
         <div class="mark"></div>
-        <h3>Every currency</h3>
-        <p>157 countries. The right one is chosen for you the first time you
-           open the app.</p>
-      </div>
-      <div class="card">
-        <div class="mark"></div>
         <h3>Email it, share it, print it</h3>
         <p>The PDF attaches itself, with the subject and message already
-           written.</p>
+           written. Share it on WhatsApp or print it from your phone.</p>
       </div>
       <div class="card">
+        <span class="pro">PRO</span>
+        <div class="mark"></div>
+        <h3>Recurring invoices</h3>
+        <p>Weekly, every two weeks, monthly, every three months or yearly: the
+           next bill raises itself.</p>
+      </div>
+      <div class="card">
+        <span class="pro">PRO</span>
         <div class="mark"></div>
         <h3>Reports</h3>
         <p>Income, collection rate and your top clients, with filters for any
            period.</p>
+      </div>
+      <div class="card">
+        <div class="mark"></div>
+        <h3>Any currency, Urdu and Arabic</h3>
+        <p>Bill each client in their own currency. Urdu and Arabic text prints
+           correctly on the PDF.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
@@ -114,12 +192,13 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="white">
   <div class="wrap">
     <p class="eyebrow">THE INVOICE ITSELF</p>
     <h2>Designs that look paid for</h2>
-    <p class="lede">Every design is a real PDF laid out for A4, tested against
-       long descriptions, thirty-line invoices and logos of any shape.</p>
+    <p class="lede">Every design is a real PDF laid out for A4 or US Letter,
+       tested against long descriptions, thirty-line invoices and logos of any
+       shape.</p>
   </div>
 
   <!-- The designs run past continuously, right to left. The list is written
@@ -129,67 +208,67 @@
   <div class="reel">
     <div class="reel-track">
       <figure>
-        <img src="img/design-northlight.png" alt="The Northlight invoice design">
-        <figcaption><b>Northlight</b></figcaption>
+        <img src="img/design-cornerstone.png" width="840" height="1188" loading="lazy" alt="The Cornerstone invoice design">
+        <figcaption><b>Cornerstone</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-sovereign.png" alt="The Sovereign invoice design">
-        <figcaption><b>Sovereign</b></figcaption>
+        <img src="img/design-sterling.png" width="840" height="1188" loading="lazy" alt="The Sterling invoice design">
+        <figcaption><b>Sterling</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-ember.png" alt="The Ember invoice design">
-        <figcaption><b>Ember</b></figcaption>
+        <img src="img/design-redbrick.png" width="840" height="1188" loading="lazy" alt="The Redbrick invoice design">
+        <figcaption><b>Redbrick</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-tessera.png" alt="The Tessera invoice design">
-        <figcaption><b>Tessera</b></figcaption>
+        <img src="img/design-pigment.png" width="840" height="1188" loading="lazy" alt="The Pigment invoice design">
+        <figcaption><b>Pigment</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-observatory.png" alt="The Observatory invoice design">
-        <figcaption><b>Observatory</b></figcaption>
-      </figure>
-      <figure>
-        <img src="img/design-tidewater.png" alt="The Tidewater invoice design">
+        <img src="img/design-tidewater.png" width="840" height="1188" loading="lazy" alt="The Tidewater invoice design">
         <figcaption><b>Tidewater</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-regent.png" alt="The Regent invoice design">
-        <figcaption><b>Regent</b></figcaption>
+        <img src="img/design-archway.png" width="840" height="1188" loading="lazy" alt="The Archway invoice design">
+        <figcaption><b>Archway</b></figcaption>
       </figure>
       <figure>
-        <img src="img/design-archway.png" alt="The Archway invoice design">
-        <figcaption><b>Archway</b></figcaption>
+        <img src="img/design-fernhill.png" width="840" height="1188" loading="lazy" alt="The Fernhill invoice design">
+        <figcaption><b>Fernhill</b></figcaption>
+      </figure>
+      <figure>
+        <img src="img/design-folio.png" width="840" height="1188" loading="lazy" alt="The Folio invoice design">
+        <figcaption><b>Folio</b></figcaption>
       </figure>
 
       <figure aria-hidden="true">
-        <img src="img/design-northlight.png" alt=""><figcaption><b>Northlight</b></figcaption>
+        <img src="img/design-cornerstone.png" alt="" loading="lazy"><figcaption><b>Cornerstone</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-sovereign.png" alt=""><figcaption><b>Sovereign</b></figcaption>
+        <img src="img/design-sterling.png" alt="" loading="lazy"><figcaption><b>Sterling</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-ember.png" alt=""><figcaption><b>Ember</b></figcaption>
+        <img src="img/design-redbrick.png" alt="" loading="lazy"><figcaption><b>Redbrick</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-tessera.png" alt=""><figcaption><b>Tessera</b></figcaption>
+        <img src="img/design-pigment.png" alt="" loading="lazy"><figcaption><b>Pigment</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-observatory.png" alt=""><figcaption><b>Observatory</b></figcaption>
+        <img src="img/design-tidewater.png" alt="" loading="lazy"><figcaption><b>Tidewater</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-tidewater.png" alt=""><figcaption><b>Tidewater</b></figcaption>
+        <img src="img/design-archway.png" alt="" loading="lazy"><figcaption><b>Archway</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-regent.png" alt=""><figcaption><b>Regent</b></figcaption>
+        <img src="img/design-fernhill.png" alt="" loading="lazy"><figcaption><b>Fernhill</b></figcaption>
       </figure>
       <figure aria-hidden="true">
-        <img src="img/design-archway.png" alt=""><figcaption><b>Archway</b></figcaption>
+        <img src="img/design-folio.png" alt="" loading="lazy"><figcaption><b>Folio</b></figcaption>
       </figure>
     </div>
   </div>
 
   <div class="wrap">
-    <p class="note">Eight of the forty-three, every one the real PDF, rendered
+    <p class="note">Eight of the fifty-three, every one the real PDF, rendered
        by the app from the same invoice.</p>
   </div>
 </section>
@@ -204,9 +283,11 @@
     <div class="grid">
       <div class="card">
         <div class="mark"></div>
-        <h3>No tracking</h3>
-        <p>No analytics, no advertising identifiers, no third-party
-           trackers.</p>
+        <h3>Your invoices are never collected</h3>
+        <p>No client, amount or line of an invoice ever leaves your phone.
+           The Android app sends Google usage statistics and crash reports;
+           the iPhone app sends none. Details in the
+           <a href="privacy.html">privacy policy</a>.</p>
       </div>
       <div class="card">
         <div class="mark"></div>
@@ -224,7 +305,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="white">
   <div class="wrap">
     <p class="eyebrow">PRICING</p>
     <h2>Free to use. Pro when you need it.</h2>
@@ -238,15 +319,16 @@
         <div class="price">Nothing</div>
         <div class="per">for as long as you like</div>
         <p class="note">2 designs · 10 invoices a month · 10 sends a month ·
-           logo, signature, quotations and part payments included.</p>
+           logo, signature, quotations, part payments, reminders and backups
+           included.</p>
       </div>
       <div class="plan best">
         <span class="flag">3 DAYS FREE</span>
         <h3>Pro, yearly</h3>
         <div class="price">Best value</div>
         <div class="per">billed once a year</div>
-        <p class="note">All 43 designs · unlimited invoices and sends ·
-           recurring invoices · reports · backup and CSV export.</p>
+        <p class="note">All 53 designs · customise any design · unlimited
+           invoices and sends · recurring invoices · reports.</p>
       </div>
       <div class="plan">
         <h3>Pro, lifetime</h3>
@@ -274,7 +356,19 @@
       </div>
       <div class="card">
         <h3>Does it work without internet?</h3>
-        <p>Yes. Everything except buying Pro works entirely offline.</p>
+        <p>Yes. Everything works offline except buying Pro, and downloading
+           an extra font the first time you choose it.</p>
+      </div>
+      <div class="card">
+        <h3>Will it remind me about unpaid invoices?</h3>
+        <p>Yes, if you switch reminders on: on the day an invoice is due, and
+           again if it is three days late. Your client never gets a message
+           from the app.</p>
+      </div>
+      <div class="card">
+        <h3>Can I write invoices in Urdu or Arabic?</h3>
+        <p>Yes. Client names, items and notes in Urdu or Arabic print on the
+           PDF joined up and right to left.</p>
       </div>
       <div class="card">
         <h3>What if I change phone?</h3>
@@ -283,8 +377,9 @@
       </div>
       <div class="card">
         <h3>Is there a watermark?</h3>
-        <p>Never. Free invoices are clean invoices — nothing is stamped on a
-           document you send a client.</p>
+        <p>Not on anything you send. Free invoices are clean invoices. The
+           only mark the app ever adds is PREVIEW, on a preview of a Pro
+           design or option you have not unlocked.</p>
       </div>
       <div class="card">
         <h3>Can I bill in my own currency?</h3>
